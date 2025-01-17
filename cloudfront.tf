@@ -14,11 +14,12 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       allowed_methods = ["GET", "HEAD"]
       target_origin_id = var.s3_origin_id
       cached_methods = ["GET", "HEAD"]
-
+      compress = true
       viewer_protocol_policy = "redirect-to-https"
       
     }
     
+    price_class = "PriceClass_100"
     restrictions {
       geo_restriction {
         restriction_type = "none"

@@ -17,5 +17,10 @@ variable "s3_origin_id" {
 
 variable "bucket_domain_name" {
   type = string
+  default = "glens-bucket.s3.amazonaws.com"
+
+}
+variable "bucket_regional_domain_name" {
+  type = string
   default = "glens-bucket.s3.us-east-1.amazonaws.com"
 }
